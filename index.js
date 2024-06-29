@@ -31,6 +31,11 @@ app.use('/api/quiz', quizRoutes);
 app.use('/api/score', scoreRoutes);
 
 
+app.get('/', (req, res) => {
+    res.send('API is running!');
+  });
+  
+
 // Start the server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
